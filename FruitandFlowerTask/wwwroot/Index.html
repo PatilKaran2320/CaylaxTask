@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#displayButton").click(function () {
+                if ($("#fruitCheck").is(": checked")) {
+                    var fruitValue = $("#fruitCheck").val();
+                    $("#result").html("<p>" + fruitValue + "</p><img src = 'Images/Flowers.jpg' /> ");
+                }
+                if ($("#flowerCheck").is(": checked")) {
+                    var flowerValue = $("#flowerCheck").val();
+                    $("#result").append("<p>" + flowerValue + "</p> <img src = 'Images/Fruit.jpg' /> ");
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    
+        <input type="checkbox" id="fruitCheck" value="Fruits" />Fruits<br />
+        <input type="checkbox" id="flowerCheck" value="Flowers" />Flower<br />
+        <br />
+        <br />
+
+        <button id="displayButton">Display</button>
+    
+    <div id="result">
+
+    </div>
+
+</body>
+
+</html>
